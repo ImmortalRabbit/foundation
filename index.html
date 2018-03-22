@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Feather Icons -->
+
+	<!-- Component styles -->
+	<link rel="stylesheet" type="text/css" href="css/component.css" />
+	<script src="js/modernizr.custom.js"></script>
+	
+
+    <script type='text/javascript' src='https://code.jquery.com/jquery-1.12.4.min.js'></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+	
+</head>
+<body>
+	<!-- Main container -->
+	<div class="container">
+		<!-- Blueprint header -->
+
+		<!-- Grid -->
+		<section class="slider">
+			<div class="slide slide--current" data-content="content-1">
+				<div class="slide__mover">
+					<div class="zoomer flex-center">
+						<img class="zoomer__image" src="" alt="" /> <!-- Картинка которая тудет увеличиваться -->
+						 <div class="preview">
+							<img src="" alt="" />
+							<div class="zoomer__area zoomer__area--size-2"></div>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+
+
+
+
+
+<style>	
+
+.icon--circle-cross:before {
+	content: "\e602";
+}/*CLOSE*/
+
+a.button1 {
+  position: relative;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  text-shadow: -1px -1px #000;
+  user-select: none;
+  padding: .8em 2em;
+  border-radius: 18px;
+  outline: none;
+  background-color: #278e2a;
+  background-image: linear-gradient(45deg, rgba(255,255,255,.0) 30%, rgba(255,255,255,.8), rgba(255,255,255,.0) 70%), radial-gradient(190% 100% at 50% 0%, rgba(255,255,255,.7) 0%, rgba(255,255,255,.5) 50%, rgba(0,0,0,0) 50%);
+  background-repeat: no-repeat;
+  background-size: 200% 100%, auto;
+  background-position: 200% 0, 0 0;
+  box-shadow: rgba(0,0,0,.3) 0 2px 5px;
+} 
+a.button1:active {
+  top: 1px;
+  box-shadow: none;
+}
+a.button1:hover {
+  transition: .5s linear;
+  background-position: -200% 0, 0 0;
+}
+
+
+</style>
+<a href="#" class="button1 button button--zoom" tabindex="0">Калькулятор</a>
+
+
+			
+		
+			
+		</section>
+		<!-- /slider-->
+		<section class="content">
+			<div class="content__item" id="content-1">
+				
+					<!-- right-->
+			<div class="container">
+				<div class="row">
+					<div class="input_block">
+								<form class="form-horizontal offsetForm"> 
+        		<div class="form-group">
+            <label class="col-xs-3 control-label">Тип фундамента</label>
+            <div class="col-xs-9">
+                 <div class="btn-group" data-toggle="buttons" id="betonType">
+                      <label class="btn btn-default btn-lg active"><img src="images/type1.jpg" alt="" />
+                        <input class="typeF" type="radio" name="radio-1" id="radio-1" value="1" autocomplete="off" checked data-path="images/1.jpg" />
+                      </label>
+                      
+                      <label class="btn btn-default btn-lg"><img src="images/type2.jpg" alt="" />
+                        <input class="typeF" type="radio" name="radio-1" id="radio-2" value="2" autocomplete="off" data-path="images/2.jpg" />
+                      </label>
+                      
+                      <label class="btn btn-default btn-lg"><img src="images/type3.jpg" alt="" />
+                        <input class="typeF" type="radio" name="radio-1" id="radio-3" value="3" autocomplete="off" data-path="images/3.jpg" />
+                      </label>
+                      
+                      <label class="btn btn-default btn-lg"><img src="images/type4.jpg" alt="" />
+                        <input class="typeF" type="radio" name="radio-1" id="radio-4" value="4" autocomplete="off" data-path="images/4.jpg" />
+                      </label>
+                      
+                      <label class="btn btn-default btn-lg"><img src="images/type5.jpg" alt="" />
+                        <input class="typeF" type="radio" name="radio-1" id="radio-5" value="5" autocomplete="off" data-path="images/5.jpg" />
+                      </label>
+                      
+                      <label class="btn btn-default btn-lg"><img src="images/type6.jpg" alt="" />
+                        <input class="typeF" type="radio" name="radio-1" id="radio-6" value="6" autocomplete="off" data-path="images/6.jpg" />
+                      </label>
+                      
+                      <label class="btn btn-default btn-lg"><img src="images/type7.jpg" alt="" />
+                        <input class="typeF" type="radio" name="radio-1" id="radio-7" value="7" autocomplete="off" data-path="images/7.jpg" />
+                      </label> 
+                 </div>
+            </div>
+         </div>
+ 
+        
+        <div id="aSideL">
+            <div class="form-group">
+                    <label for="aSide" class="col-xs-3 control-label">Длина А</label>
+                    <div class="col-xs-9">
+                    	<div id="slidecontainer">
+  							<input type="range" min="1" max="30" value="6" class="slider" id="myRange">
+						</div>
+                        <div class="input-group">
+                            <div class="min min1">-</div>
+                            <input class="inis" type="text" name="lines" id="aSide" value="6" />
+                            <div class="plu plu1">+</div>
+
+                        </div>    
+                    </div>
+            </div>
+        </div>
+        <div id="bSideL">
+            <div class="form-group">    
+                    <label for="bSide" class="col-xs-3 control-label">Длина B</label> 
+                    <div id="slidecontainer">
+  							<input type="range" min="1" max="30" value="8" class="slider" id="myRange">
+						</div>
+                    <div class="col-xs-9">
+                        <div class="input-group">
+                        	<div class="min min2">-</div>
+                            <input class="inis" type="text" name="lines" id="bSide" value="8" />
+                            <div class="plu plu2">+</div>
+                        </div>    
+                    </div>    
+            </div>
+        </div>
+        
+        <div id="cSideL">
+            <div class="form-group">    
+                    <label for="cSide" class="col-xs-3 control-label">Длина C</label> 
+                    <div id="slidecontainer">
+  							<input type="range" min="1" max="30" value="3" class="slider" id="myRange">
+						</div>
+                    <div class="col-xs-9">
+                        <div class="input-group">
+                        	<div class="min min3">-</div>
+                            <input class="inis" type="text" name="lines" id="cSide" value="3" />
+                            <div class="plu plu3">+</div>
+                        </div>    
+                    </div>    
+            </div>
+        </div>
+        <div id="dSideL">
+            <div class="form-group">    
+                    <label for="dSide" class="col-xs-3 control-label">Длина D</label> 
+                    <div id="slidecontainer">
+  							<input type="range" min="1" max="30" value="4" class="slider" id="myRange">
+						</div>
+                    <div class="col-xs-9">
+                        <div class="input-group">
+                        	<div class="min min4">-</div>
+                            <input class="inis" type="text" name="lines" id="dSide" value="4" />
+                        	<div class="plu plu4">+</div>
+                        </div>    
+                    </div>    
+            </div>
+        </div>
+        <div id="eSideL">
+            <div class="form-group">    
+                    <label for="eSide" class="col-xs-3 control-label">Высота E</label> 
+
+                    <div class="col-xs-9">
+                        <div class="input-group">
+                        	<div class="min min5">-</div>
+                            <input class="inis" type="text" name="lines" id="eSide" value="20" />
+                        	<div class="plu plu5">+</div>
+                        </div>    
+                    </div>    
+            </div>
+        </div>
+        <div id="fSideL">
+            <div class="form-group">    
+                    <label for="fSide" class="col-xs-3 control-label">Ширина F</label> 
+                    
+                    <div class="col-xs-9">
+                        <div class="input-group">
+                        	<div class="min min6">-</div>
+                            <input class="inis" type="text" name="lines" id="fSide" value="15" />
+                        	<div class="plu plu6">+</div>
+                        </div>
+                    </div>    
+            </div>
+        </div>
+        
+        <div class="form-group">
+                <div class="col-xs-offset-3 col-xs-9">
+                    <div class="checkbox">
+                        <label><input type="checkbox" name="construction" id="construction" autocomplete="off" /> Схема фундамента</label>
+                    </div>
+                </div>
+            </div>
+        
+        <div class="form-group">
+            <div class="col-xs-offset-3 col-xs-9">
+                <div class="checkbox">
+
+                    <label><input type="checkbox" name="armatura" id="armatura" autocomplete="off" /> Расчет арматуры</label>       
+                </div>        
+            </div>        
+            
+       </div>
+            
+            <div id="armablock">
+                <div class="form-group">
+                    <label id="betonPodg" class="col-xs-3 control-label">Бетонная подготовка</label>
+                        <div class="col-xs-9">
+                            <select id="betonPodgSel" class="form-control">
+                                <option value="1">Да</option>
+                                <option value="0">Нет</option>
+                            </select>
+                        </div>   
+                </div>
+                <div class="form-group">
+                    <label class="col-xs-3 control-label">Длина стержня арматуры</label>
+                         <div class="col-xs-9">
+                            <div class="input-group">
+                                <input id="dlinSterz" class="form-control" type="text" name="dlinSterz" value="11.7" />
+                                <span class="input-group-addon">м</span>
+                            </div>
+                         </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-xs-3 control-label">Площадь сечения арматуры (<i>μ<sub>s min</sub></i>)</label>
+                        <div class="col-xs-9">
+                           <div class="input-group">
+                               <select id="armS" class="form-control">
+                                    <option value="0.05">0.05</option>
+                                    <option value="0.1">0.1</option>
+                                    <option value="0.15">0.15</option>
+                                    <option selected="" value="0.2">0.2</option>
+                                    <option value="0.25">0.25</option>
+                                    <option value="0.3">0.3</option>
+                                    <option value="0.35">0.35</option>
+                                    <option value="0.4">0.4</option>
+                               </select>
+                               <span class="input-group-addon">%</span> 
+                          </div>
+                        </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-xs-3 control-label">Каркас арматуры</label>
+                        <div class="col-xs-9">
+                             <select id="karkas" class="form-control">
+                                 <option value="1">Сварной</option>
+                                 <option selected="" value="2">Вязаный</option>
+                             </select>
+                        </div>
+                  </div>
+            </div> <!--#armablock-->
+            
+            <div class="form-group">
+                <div class="col-xs-offset-3 col-xs-9">
+                    <div class="checkbox">
+                        <label><input type="checkbox" name="opalubka" id="opalubka" autocomplete="off" /> Расчет опалубки</label>
+                    </div>
+                </div>    
+            </div> 
+               
+            <div id="opalubblock">
+                <div class="form-group">
+                    <label class="col-xs-3 control-label">Ширина доски</label>
+                    <div class="col-xs-9">
+                        <div class="input-group">
+                            <input id="wDdoska" class="form-control" type="number" value="150" />
+                            <span class="input-group-addon">мм</span>
+                        </div>    
+                    </div>
+                </div>
+                <div class="form-group">    
+                    <label class="col-xs-3 control-label">Длина доски</label>
+                    <div class="col-xs-9">
+                        <div class="input-group">
+                            <input id="lDdoska" class="form-control" type="number" value="6000" />
+                            <span class="input-group-addon">мм</span>
+                        </div>    
+                    </div>    
+                </div>
+                <div class="form-group">
+                    <label class="col-xs-3 control-label">Толщина доски</label>
+                    <div class="col-xs-9">
+                        <div class="input-group">    
+                            <input id="tDdoska" class="form-control" type="number" value="" />
+                            <span class="input-group-addon">мм</span>
+                        </div>    
+                    </div>    
+                </div>
+            </div>
+            
+             <div class="form-group">
+                <div class="col-xs-offset-3 col-xs-9">
+                    <button id="calculate" name="calculate" type="submit" class="btn btn-danger" onclick=" return false">Рассчитать</button>
+                </div>
+             </div>
+        
+   
+        
+        
+  </form>
+				</div>
+			</div>
+		</div>
+
+  				
+				<!-- left-->
+				<div class="content__item-inner">
+<!--Калк-->
+
+
+                <div style="width:750px;">
+                <div class="ah-obrabotka-wrapp">
+                    <h1>Калькулятор ленточного фундамента</h1>
+        <div class="fundImg">
+            <div id="selmimg"><img src="images/1.jpg" /></div>
+        </div>                                               
+                
+   <div id="result"></div>    
+ 
+ 
+     
+ <div>
+  
+    
+
+ </div>   
+        
+    
+     
+                </div>
+            </div>
+			<script type="text/javascript">
+       jQuery('#aSideL').show().attr('class','onValue');
+       jQuery('#aSide').val('5');
+       jQuery('#bSideL').show().attr('class','onValue');
+       jQuery('#bSide').val('10');
+       jQuery('#cSideL').hide().attr('class','offValue');
+       jQuery('#cSide').val('0');       
+       jQuery('#dSideL').hide().attr('class','offValue');
+       jQuery('#dSide').val('0');
+       jQuery('#eSideL').show().attr('class','onValue');
+       jQuery('#eSide').val('70');
+       jQuery('#fSideL').show().attr('class','onValue');   
+       jQuery('#fSide').val('40');
+       
+jQuery('#betonType input[type=radio]').change(function() {
+    if(jQuery('#radio-1').prop('checked')) {
+       jQuery('#aSideL').show().attr('class','onValue');
+       jQuery('#aSide').val('5');
+       jQuery('#bSideL').show().attr('class','onValue');
+       jQuery('#bSide').val('10');
+       jQuery('#cSideL').hide().attr('class','offValue');
+       jQuery('#cSide').val('0');
+       jQuery('#dSideL').hide().attr('class','offValue');
+       jQuery('#dSide').val('0');
+       jQuery('#eSideL').show().attr('class','onValue');
+       jQuery('#eSide').val('70');
+       jQuery('#fSideL').show().attr('class','onValue');
+       jQuery('#fSide').val('40');
+    }
+    
+    if(jQuery('#radio-2').prop('checked')) {
+       jQuery('#aSideL').show().attr('class','onValue');
+       jQuery('#aSide').val('5');
+       jQuery('#bSideL').show().attr('class','onValue');
+       jQuery('#bSide').val('10');
+       jQuery('#cSideL').hide().attr('class','offValue');
+       jQuery('#cSide').val('0');
+       jQuery('#dSideL').hide().attr('class','offValue');
+       jQuery('#dSide').val('0');
+       jQuery('#eSideL').show().attr('class','onValue');
+       jQuery('#eSide').val('70');
+       jQuery('#fSideL').show().attr('class','onValue');
+       jQuery('#fSide').val('40'); 
+    }
+    
+    if(jQuery('#radio-3').prop('checked')) {
+       jQuery('#aSideL').show().attr('class','onValue');
+       jQuery('#aSide').val('5');
+       jQuery('#bSideL').show().attr('class','onValue');
+       jQuery('#bSide').val('10');
+       jQuery('#cSideL').show().attr('class','onValue');
+       jQuery('#cSide').val('3');
+       jQuery('#dSideL').hide().attr('class','offValue');
+       jQuery('#dSide').val('0');
+       jQuery('#eSideL').show().attr('class','onValue');
+       jQuery('#eSide').val('70');
+       jQuery('#fSideL').show().attr('class','onValue');
+       jQuery('#fSide').val('40');
+    }
+    if(jQuery('#radio-4').prop('checked')) {
+       jQuery('#aSideL').show().attr('class','onValue');
+       jQuery('#aSide').val('5');
+       jQuery('#bSideL').show().attr('class','onValue');
+       jQuery('#bSide').val('10');
+       jQuery('#cSideL').hide().attr('class','offValue');
+       jQuery('#cSide').val('0');
+       jQuery('#dSideL').hide().attr('class','offValue');
+       jQuery('#dSide').val('0');
+       jQuery('#eSideL').show().attr('class','onValue');
+       jQuery('#eSide').val('70');
+       jQuery('#fSideL').show().attr('class','onValue');
+       jQuery('#fSide').val('40');
+    }
+    if(jQuery('#radio-5').prop('checked')) {
+       jQuery('#aSideL').show().attr('class','onValue');
+       jQuery('#aSide').val('5');
+       jQuery('#bSideL').show().attr('class','onValue');
+       jQuery('#bSide').val('10');
+       jQuery('#cSideL').show().attr('class','onValue');
+       jQuery('#cSide').val('3');
+       jQuery('#dSideL').show().attr('class','onValue');
+       jQuery('#dSide').val('4');
+       jQuery('#eSideL').show().attr('class','onValue');
+       jQuery('#eSide').val('70');
+       jQuery('#fSideL').show().attr('class','onValue');
+       jQuery('#fSide').val('40');
+    }
+      if(jQuery('#radio-6').prop('checked')) {
+       jQuery('#aSideL').show().attr('class','onValue');
+       jQuery('#aSide').val('5');
+       jQuery('#bSideL').show().attr('class','onValue');
+       jQuery('#bSide').val('10');
+       jQuery('#cSideL').show().attr('class','onValue');
+       jQuery('#cSide').val('3');
+       jQuery('#dSideL').hide().attr('class','onValue');
+       jQuery('#dSide').val('0');
+       jQuery('#eSideL').show().attr('class','onValue');
+       jQuery('#eSide').val('70');
+       jQuery('#fSideL').show().attr('class','onValue');
+       jQuery('#fSide').val('40');
+    } 
+      if(jQuery('#radio-7').prop('checked')) {
+       jQuery('#aSideL').show().attr('class','onValue');
+       jQuery('#aSide').val('5');
+       jQuery('#bSideL').show().attr('class','onValue');
+       jQuery('#bSide').val('10');
+       jQuery('#cSideL').hide().attr('class','onValue');
+       jQuery('#cSide').val('0');
+       jQuery('#dSideL').hide().attr('class','onValue');
+       jQuery('#dSide').val('0');
+       jQuery('#eSideL').show().attr('class','onValue');
+       jQuery('#eSide').val('70');
+       jQuery('#fSideL').show().attr('class','onValue');
+       jQuery('#fSide').val('40');
+    }
+    
+    
+    jQuery('#selmimg').find('img:first').attr('src', jQuery('.typeF:checked').attr('data-path')); 
+    
+
+});
+     
+     jQuery('#armablock').hide(); 
+     jQuery('#armatura').change(function() {
+         if (jQuery('#armatura').prop('checked')) {
+           jQuery('#armablock').show();  
+         } else {
+           jQuery('#armablock').hide();   
+         }
+     });
+     
+     jQuery('#opalubblock').hide(); 
+     jQuery('#opalubka').change(function() {
+         if (jQuery('#opalubka').prop('checked')) {
+           jQuery('#opalubblock').show();  
+         } else {
+           jQuery('#opalubblock').hide();   
+         }
+     });
+
+     var slider = document.getElementById("myRange");
+	var output = document.getElementById("demo");
+	output.innerHTML = slider.value; // Display the default slider value
+
+// Update the current slider value (each time you drag the slider handle)
+	slider.oninput = function() {
+    	output.innerHTML = this.value;
+	}
+               
+                   
+                        jQuery('#calculate').on('click', function(){
+                            
+                            var typeF = jQuery('input[class=typeF]:checked').val();
+                            var betonType = jQuery('select#betonType').val(); 
+                            var arm = jQuery('#armatura').prop("checked");
+                            var betonPodgSel = jQuery('select#betonPodgSel').val();
+                            var dlinSterz = jQuery('#dlinSterz').val();
+                            var armS = jQuery('#armS').val();
+                            var karkas = jQuery('#karkas').val();
+                            var opalubka = jQuery('#opalubka').prop("checked");
+                            var wDdoska = jQuery('#wDdoska').val();
+                            var lDdoska = jQuery('#lDdoska').val();
+                            var tDdoska = jQuery('#tDdoska').val();
+                                if (!tDdoska) { tDdoska = 0;
+                            }
+                            var construction = jQuery('#construction').prop("checked");
+                            var A = jQuery('#aSide').val();
+                            var B = jQuery('#bSide').val();
+                            var C = jQuery('#cSide').val();
+                            var D = jQuery('#dSide').val();
+                            var E = jQuery('#eSide').val();
+                            var F = jQuery('#fSide').val();
+                            
+                            jQuery.ajax({
+                             type: 'POST',
+                             url: 'http://hlfivcuy.beget.tech/calc.php',
+                             async: false,
+                             data: { 'arm': arm, 'betonPodgSel': betonPodgSel, 'dlinSterz': dlinSterz, 'armS': armS, 'karkas': karkas, 'opalubka': opalubka, 'wDdoska': wDdoska, 'lDdoska': lDdoska, 'tDdoska': tDdoska, 'construction': construction, 'typeF': typeF, 'betonType': betonType, 'a': A, 'b': B,'c': C, 'd': D, 'e':E,'f':F },
+                             //cache: false,
+                             success: function(html){
+                                 jQuery('#result').html(html);
+                             } 
+                             });       
+                            
+                        });
+
+</script>
+
+<!--Калк-->
+				</div>
+			</div>
+			
+			<button class="button button--close"><i class="icon icon--circle-cross"></i><span class="text-hidden">Close content</span></button>
+		</section>
+	</div>
+	<script src="js/classie.js"></script>
+	<script src="js/dynamics.min.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>

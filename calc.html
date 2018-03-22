@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel='stylesheet' id='bootstrap-css-css'  href='//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css?ver=4.8.4' type='text/css' media='all' />
+<script type='text/javascript' src='https://code.jquery.com/jquery-1.12.4.min.js'></script>
+<script type='text/javascript' src='//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js?ver=4.8.4'></script>
+</head>
+<body>
+			<div style="width:750px;">
+                <div class="ah-obrabotka-wrapp">
+                    <h1>Калькулятор ленточного фундамента</h1>
+                                                               
+ <form class="form-horizontal offsetForm"> 
+        <div class="form-group">
+            <label class="col-xs-3 control-label">Тип фундамента</label>
+            <div class="col-xs-9">
+                 <div class="btn-group" data-toggle="buttons" id="betonType">
+                      <label class="btn btn-default btn-lg active"><img src="images/type1.jpg" alt="" />
+                        <input class="typeF" type="radio" name="radio-1" id="radio-1" value="1" autocomplete="off" checked data-path="images/1.jpg" />
+                      </label>
+                      
+                      <label class="btn btn-default btn-lg"><img src="images/type2.jpg" alt="" />
+                        <input class="typeF" type="radio" name="radio-1" id="radio-2" value="2" autocomplete="off" data-path="images/2.jpg" />
+                      </label>
+                      
+                      <label class="btn btn-default btn-lg"><img src="images/type3.jpg" alt="" />
+                        <input class="typeF" type="radio" name="radio-1" id="radio-3" value="3" autocomplete="off" data-path="images/3.jpg" />
+                      </label>
+                      
+                      <label class="btn btn-default btn-lg"><img src="images/type4.jpg" alt="" />
+                        <input class="typeF" type="radio" name="radio-1" id="radio-4" value="4" autocomplete="off" data-path="images/4.jpg" />
+                      </label>
+                      
+                      <label class="btn btn-default btn-lg"><img src="images/type5.jpg" alt="" />
+                        <input class="typeF" type="radio" name="radio-1" id="radio-5" value="5" autocomplete="off" data-path="images/5.jpg" />
+                      </label>
+                      
+                      <label class="btn btn-default btn-lg"><img src="images/type6.jpg" alt="" />
+                        <input class="typeF" type="radio" name="radio-1" id="radio-6" value="6" autocomplete="off" data-path="images/6.jpg" />
+                      </label>
+                      
+                      <label class="btn btn-default btn-lg"><img src="images/type7.jpg" alt="" />
+                        <input class="typeF" type="radio" name="radio-1" id="radio-7" value="7" autocomplete="off" data-path="images/7.jpg" />
+                      </label> 
+                 </div>
+            </div>
+         </div>
+  
+        <div class="fundImg">
+            <div id="selmimg"><img src="images/1.jpg" /></div>
+        </div>
+  
+        <div class="form-group">
+            <label for="betonType" class="col-xs-3 control-label">Марка бетона</label>
+            <div class="col-xs-9">
+                <select id="betonType" class="form-control">
+                    <option value="70">М100 (В7,5) </option>
+                    <option value="63">М150 (В10)</option>
+                    <option value="49">М200 (В15)</option>
+                    <option value="40">М250 (В20)</option>
+                    <option selected="" value="37">М300 (В22.5)</option>
+                    <option value="34">М350 (В25)</option>
+                    <option value="30">М400 (В30)</option>
+                    <option value="27">М450 (В35)</option>
+                    <option value="26">М500 (В40)</option>
+                    <option value="24">М550 (В45)</option>
+                    <option value="23">М600 (В50)</option>
+                    <option value="23">М700 (В55)</option>
+                    <option value="22">М800 (В60)</option>
+                </select>
+            </div>
+        </div>
+        
+        <div id="aSideL">
+            <div class="form-group">
+                    <label for="aSide" class="col-xs-3 control-label">Длина А</label>
+                    <div class="col-xs-9">
+                        <div class="input-group">
+                            <input class="form-control" type="number" name="lines" id="aSide" value="6" />
+                            <span class="input-group-addon">м</span>
+                        </div>    
+                    </div>
+            </div>
+        </div>
+        <div id="bSideL">
+            <div class="form-group">    
+                    <label for="bSide" class="col-xs-3 control-label">Длина B</label> 
+                    <div class="col-xs-9">
+                        <div class="input-group">
+                            <input class="form-control" type="number" name="lines" id="bSide" value="8" />
+                            <span class="input-group-addon">м</span>
+                        </div>    
+                    </div>    
+            </div>
+        </div>
+        
+        <div id="cSideL">
+            <div class="form-group">    
+                    <label for="cSide" class="col-xs-3 control-label">Длина C</label> 
+                    <div class="col-xs-9">
+                        <div class="input-group">
+                            <input class="form-control" type="number" name="lines" id="cSide" value="3" />
+                            <span class="input-group-addon">м</span>
+                        </div>    
+                    </div>    
+            </div>
+        </div>
+        <div id="dSideL">
+            <div class="form-group">    
+                    <label for="dSide" class="col-xs-3 control-label">Длина D</label> 
+                    <div class="col-xs-9">
+                        <div class="input-group">
+                            <input class="form-control" type="number" name="lines" id="dSide" value="4" />
+                            <span class="input-group-addon">м</span>
+                        </div>    
+                    </div>    
+            </div>
+        </div>
+        <div id="eSideL">
+            <div class="form-group">    
+                    <label for="eSide" class="col-xs-3 control-label">Высота E</label> 
+                    <div class="col-xs-9">
+                        <div class="input-group">
+                            <input class="form-control" type="number" name="lines" id="eSide" value="70" />
+                            <span class="input-group-addon">см</span>
+                        </div>    
+                    </div>    
+            </div>
+        </div>
+        <div id="fSideL">
+            <div class="form-group">    
+                    <label for="fSide" class="col-xs-3 control-label">Ширина F</label> 
+                    <div class="col-xs-9">
+                        <div class="input-group">
+                            <input class="form-control" type="number" name="lines" id="fSide" value="40" />
+                            <span class="input-group-addon">см</span>
+                        </div>
+                    </div>    
+            </div>
+        </div>
+        
+        <div class="form-group">
+                <div class="col-xs-offset-3 col-xs-9">
+                    <div class="checkbox">
+                        <label><input type="checkbox" name="construction" id="construction" autocomplete="off" /> Схема фундамента</label>
+                    </div>
+                </div>
+            </div>
+        
+        <div class="form-group">
+            <div class="col-xs-offset-3 col-xs-9">
+                <div class="checkbox">
+                    <label><input type="checkbox" name="armatura" id="armatura" autocomplete="off" /> Расчет арматуры</label>       
+                </div>        
+            </div>        
+            
+       </div>
+            
+            <div id="armablock">
+                <div class="form-group">
+                    <label id="betonPodg" class="col-xs-3 control-label">Бетонная подготовка</label>
+                        <div class="col-xs-9">
+                            <select id="betonPodgSel" class="form-control">
+                                <option value="1">Да</option>
+                                <option value="0">Нет</option>
+                            </select>
+                        </div>   
+                </div>
+                <div class="form-group">
+                    <label class="col-xs-3 control-label">Длина стержня арматуры</label>
+                         <div class="col-xs-9">
+                            <div class="input-group">
+                                <input id="dlinSterz" class="form-control" type="text" name="dlinSterz" value="11.7" />
+                                <span class="input-group-addon">м</span>
+                            </div>
+                         </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-xs-3 control-label">Площадь сечения арматуры (<i>μ<sub>s min</sub></i>)</label>
+                        <div class="col-xs-9">
+                           <div class="input-group">
+                               <select id="armS" class="form-control">
+                                    <option value="0.05">0.05</option>
+                                    <option value="0.1">0.1</option>
+                                    <option value="0.15">0.15</option>
+                                    <option selected="" value="0.2">0.2</option>
+                                    <option value="0.25">0.25</option>
+                                    <option value="0.3">0.3</option>
+                                    <option value="0.35">0.35</option>
+                                    <option value="0.4">0.4</option>
+                               </select>
+                               <span class="input-group-addon">%</span> 
+                          </div>
+                        </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-xs-3 control-label">Каркас арматуры</label>
+                        <div class="col-xs-9">
+                             <select id="karkas" class="form-control">
+                                 <option value="1">Сварной</option>
+                                 <option selected="" value="2">Вязаный</option>
+                             </select>
+                        </div>
+                  </div>
+            </div> <!--#armablock-->
+            
+            <div class="form-group">
+                <div class="col-xs-offset-3 col-xs-9">
+                    <div class="checkbox">
+                        <label><input type="checkbox" name="opalubka" id="opalubka" autocomplete="off" /> Расчет опалубки</label>
+                    </div>
+                </div>    
+            </div> 
+               
+            <div id="opalubblock">
+                <div class="form-group">
+                    <label class="col-xs-3 control-label">Ширина доски</label>
+                    <div class="col-xs-9">
+                        <div class="input-group">
+                            <input id="wDdoska" class="form-control" type="number" value="150" />
+                            <span class="input-group-addon">мм</span>
+                        </div>    
+                    </div>
+                </div>
+                <div class="form-group">    
+                    <label class="col-xs-3 control-label">Длина доски</label>
+                    <div class="col-xs-9">
+                        <div class="input-group">
+                            <input id="lDdoska" class="form-control" type="number" value="6000" />
+                            <span class="input-group-addon">мм</span>
+                        </div>    
+                    </div>    
+                </div>
+                <div class="form-group">
+                    <label class="col-xs-3 control-label">Толщина доски</label>
+                    <div class="col-xs-9">
+                        <div class="input-group">    
+                            <input id="tDdoska" class="form-control" type="number" value="" />
+                            <span class="input-group-addon">мм</span>
+                        </div>    
+                    </div>    
+                </div>
+            </div>
+            
+             <div class="form-group">
+                <div class="col-xs-offset-3 col-xs-9">
+                    <button id="calculate" name="calculate" type="submit" class="btn btn-danger" onclick=" return false">Рассчитать</button>
+                </div>
+             </div>
+        
+   
+        
+        
+  </form>
+  
+   <div id="result"></div>    
+ 
+ 
+     
+ <div>
+  
+    
+
+ </div>   
+        
+    
+     
+                </div>
+            </div>
+			<script type="text/javascript">
+       jQuery('#aSideL').show().attr('class','onValue');
+       jQuery('#aSide').val('5');
+       jQuery('#bSideL').show().attr('class','onValue');
+       jQuery('#bSide').val('10');
+       jQuery('#cSideL').hide().attr('class','offValue');
+       jQuery('#cSide').val('0');       
+       jQuery('#dSideL').hide().attr('class','offValue');
+       jQuery('#dSide').val('0');
+       jQuery('#eSideL').show().attr('class','onValue');
+       jQuery('#eSide').val('70');
+       jQuery('#fSideL').show().attr('class','onValue');   
+       jQuery('#fSide').val('40');
+       
+jQuery('#betonType input[type=radio]').change(function() {
+    if(jQuery('#radio-1').prop('checked')) {
+       jQuery('#aSideL').show().attr('class','onValue');
+       jQuery('#aSide').val('5');
+       jQuery('#bSideL').show().attr('class','onValue');
+       jQuery('#bSide').val('10');
+       jQuery('#cSideL').hide().attr('class','offValue');
+       jQuery('#cSide').val('0');
+       jQuery('#dSideL').hide().attr('class','offValue');
+       jQuery('#dSide').val('0');
+       jQuery('#eSideL').show().attr('class','onValue');
+       jQuery('#eSide').val('70');
+       jQuery('#fSideL').show().attr('class','onValue');
+       jQuery('#fSide').val('40');
+    }
+    
+    if(jQuery('#radio-2').prop('checked')) {
+       jQuery('#aSideL').show().attr('class','onValue');
+       jQuery('#aSide').val('5');
+       jQuery('#bSideL').show().attr('class','onValue');
+       jQuery('#bSide').val('10');
+       jQuery('#cSideL').hide().attr('class','offValue');
+       jQuery('#cSide').val('0');
+       jQuery('#dSideL').hide().attr('class','offValue');
+       jQuery('#dSide').val('0');
+       jQuery('#eSideL').show().attr('class','onValue');
+       jQuery('#eSide').val('70');
+       jQuery('#fSideL').show().attr('class','onValue');
+       jQuery('#fSide').val('40'); 
+    }
+    
+    if(jQuery('#radio-3').prop('checked')) {
+       jQuery('#aSideL').show().attr('class','onValue');
+       jQuery('#aSide').val('5');
+       jQuery('#bSideL').show().attr('class','onValue');
+       jQuery('#bSide').val('10');
+       jQuery('#cSideL').show().attr('class','onValue');
+       jQuery('#cSide').val('3');
+       jQuery('#dSideL').hide().attr('class','offValue');
+       jQuery('#dSide').val('0');
+       jQuery('#eSideL').show().attr('class','onValue');
+       jQuery('#eSide').val('70');
+       jQuery('#fSideL').show().attr('class','onValue');
+       jQuery('#fSide').val('40');
+    }
+    if(jQuery('#radio-4').prop('checked')) {
+       jQuery('#aSideL').show().attr('class','onValue');
+       jQuery('#aSide').val('5');
+       jQuery('#bSideL').show().attr('class','onValue');
+       jQuery('#bSide').val('10');
+       jQuery('#cSideL').hide().attr('class','offValue');
+       jQuery('#cSide').val('0');
+       jQuery('#dSideL').hide().attr('class','offValue');
+       jQuery('#dSide').val('0');
+       jQuery('#eSideL').show().attr('class','onValue');
+       jQuery('#eSide').val('70');
+       jQuery('#fSideL').show().attr('class','onValue');
+       jQuery('#fSide').val('40');
+    }
+    if(jQuery('#radio-5').prop('checked')) {
+       jQuery('#aSideL').show().attr('class','onValue');
+       jQuery('#aSide').val('5');
+       jQuery('#bSideL').show().attr('class','onValue');
+       jQuery('#bSide').val('10');
+       jQuery('#cSideL').show().attr('class','onValue');
+       jQuery('#cSide').val('3');
+       jQuery('#dSideL').show().attr('class','onValue');
+       jQuery('#dSide').val('4');
+       jQuery('#eSideL').show().attr('class','onValue');
+       jQuery('#eSide').val('70');
+       jQuery('#fSideL').show().attr('class','onValue');
+       jQuery('#fSide').val('40');
+    }
+      if(jQuery('#radio-6').prop('checked')) {
+       jQuery('#aSideL').show().attr('class','onValue');
+       jQuery('#aSide').val('5');
+       jQuery('#bSideL').show().attr('class','onValue');
+       jQuery('#bSide').val('10');
+       jQuery('#cSideL').show().attr('class','onValue');
+       jQuery('#cSide').val('3');
+       jQuery('#dSideL').hide().attr('class','onValue');
+       jQuery('#dSide').val('0');
+       jQuery('#eSideL').show().attr('class','onValue');
+       jQuery('#eSide').val('70');
+       jQuery('#fSideL').show().attr('class','onValue');
+       jQuery('#fSide').val('40');
+    } 
+      if(jQuery('#radio-7').prop('checked')) {
+       jQuery('#aSideL').show().attr('class','onValue');
+       jQuery('#aSide').val('5');
+       jQuery('#bSideL').show().attr('class','onValue');
+       jQuery('#bSide').val('10');
+       jQuery('#cSideL').hide().attr('class','onValue');
+       jQuery('#cSide').val('0');
+       jQuery('#dSideL').hide().attr('class','onValue');
+       jQuery('#dSide').val('0');
+       jQuery('#eSideL').show().attr('class','onValue');
+       jQuery('#eSide').val('70');
+       jQuery('#fSideL').show().attr('class','onValue');
+       jQuery('#fSide').val('40');
+    }
+    
+    
+    jQuery('#selmimg').find('img:first').attr('src', jQuery('.typeF:checked').attr('data-path')); 
+    
+
+});
+     
+     jQuery('#armablock').hide(); 
+     jQuery('#armatura').change(function() {
+         if (jQuery('#armatura').prop('checked')) {
+           jQuery('#armablock').show();  
+         } else {
+           jQuery('#armablock').hide();   
+         }
+     });
+     
+     jQuery('#opalubblock').hide(); 
+     jQuery('#opalubka').change(function() {
+         if (jQuery('#opalubka').prop('checked')) {
+           jQuery('#opalubblock').show();  
+         } else {
+           jQuery('#opalubblock').hide();   
+         }
+     });
+
+               
+                   
+                        jQuery('#calculate').on('click', function(){
+                            
+                            var typeF = jQuery('input[class=typeF]:checked').val();
+                            var betonType = jQuery('select#betonType').val(); 
+                            var arm = jQuery('#armatura').prop("checked");
+                            var betonPodgSel = jQuery('select#betonPodgSel').val();
+                            var dlinSterz = jQuery('#dlinSterz').val();
+                            var armS = jQuery('#armS').val();
+                            var karkas = jQuery('#karkas').val();
+                            var opalubka = jQuery('#opalubka').prop("checked");
+                            var wDdoska = jQuery('#wDdoska').val();
+                            var lDdoska = jQuery('#lDdoska').val();
+                            var tDdoska = jQuery('#tDdoska').val();
+                                if (!tDdoska) { tDdoska = 0;
+                            }
+                            var construction = jQuery('#construction').prop("checked");
+                            var A = jQuery('#aSide').val();
+                            var B = jQuery('#bSide').val();
+                            var C = jQuery('#cSide').val();
+                            var D = jQuery('#dSide').val();
+                            var E = jQuery('#eSide').val();
+                            var F = jQuery('#fSide').val();
+                            
+                            jQuery.ajax({
+                             type: 'POST',
+                             url: 'http://hlfivcuy.beget.tech/calc.php',
+                             async: false,
+                             data: { 'arm': arm, 'betonPodgSel': betonPodgSel, 'dlinSterz': dlinSterz, 'armS': armS, 'karkas': karkas, 'opalubka': opalubka, 'wDdoska': wDdoska, 'lDdoska': lDdoska, 'tDdoska': tDdoska, 'construction': construction, 'typeF': typeF, 'betonType': betonType, 'a': A, 'b': B,'c': C, 'd': D, 'e':E,'f':F },
+                             //cache: false,
+                             success: function(html){
+                                 jQuery('#result').html(html);
+                             } 
+                             });       
+                            
+                        });
+
+</script>
+</body>
+</html>
